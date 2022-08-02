@@ -1,0 +1,49 @@
+file---> polls/viwes.py
+
+from django.shortcuts import render
+from django.http import HttpResponse
+
+def home(request):
+    #name = "Mahfuz"
+    #email = "mahfuzpust@gmail.com"
+    #return render(request,"demo.html",{"Name":name,"Email": email})
+    dict_users = []
+    x = {"Name": "Mahfuz","Email" : "mahfuzpust@gmail.com" }
+    dict_users.append(x)
+    x = {"Name": "Mahfuz Khan","Email" : "mahfuz@gmail.com" }
+    dict_users.append(x)
+    x = {"Name": "Mahfuz Khan Raj","Email" : "mahfuzkhan@gmail.com" }
+    dict_users.append(x)
+    return render(request,"demo.html",{'Users': dict_users})
+
+def login(request):
+    return render(request,"login.html")
+def signup(request):
+    return render(request,"signup.html")
+    
+
+file ---> demo.html
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+</head>
+<body>
+    <!-- <h1>{{Name}}</h1> -->
+    <!-- <h2>your Email is :  {{Email}}</h2> -->
+
+    {% for user in Users %}
+    <h2>
+       Hello I am {{user.Name}} , my email is {{user.Email}}
+    </h2>
+    {% endfor %}
+
+    <h2><a href ="{% url 'login' %}">Login</a></h2>
+    <h2><a href ="{% url 'signup' %}">Signup</a></h2>
+</body>
+</html>
