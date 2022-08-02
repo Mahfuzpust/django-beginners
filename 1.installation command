@@ -1,0 +1,17 @@
+ps1 file activation
+Set-ExecutionPolicy Unrestricted -Force
+
+env create
+python -m venv [environment name]
+
+python -m venv env
+
+.\env\Scripts\activate.ps1 ---(for terminal)
+.\env\Scripts\activate.bat ---(for cmd)
+
+pip install django
+python -m pip install --upgrade pip
+
+django-admin startproject myproject . --//prject create.
+code . --//project goes to vs code
+python manage.py runserver
