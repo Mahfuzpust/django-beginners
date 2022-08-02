@@ -1,0 +1,19 @@
+file name---> demo.html
+    
+<body>
+    <h1>It is home menu.</h1>
+    <h2><a href ="{% url 'login' %}">Login</a></h2>
+    <h2><a href ="{% url 'signup' %}">Signup</a></h2>
+</body>
+
+file name---> login.html
+
+<body>
+    you are login in page.
+</body>
+
+file name---> signup.html
+
+<body>
+    you are signup in page.
+</body>
