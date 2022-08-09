@@ -5,14 +5,14 @@ index.html
 
 <body>
 
-    {% extends 'contract.html'%}
+    {% extends 'contract.html'%}  // page value transfer
 
-    {% block content %}
+    {% block content %}  // It uses for output showing
 
     <h1> Your Name is {{Name}}</h1>
     <h1>Your learning course {{Course}}</h1>
 
-    {% endblock %}
+    {% endblock %} // ending
 </body>
 
 
