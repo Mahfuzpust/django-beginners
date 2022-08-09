@@ -1,5 +1,5 @@
 ps1 file activation
-Set-ExecutionPolicy Unrestricted -Force
+Set-ExecutionPolicy Unrestricted -Force // use powershell
 
 env create
 python -m venv [environment name]
