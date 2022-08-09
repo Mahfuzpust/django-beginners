@@ -1,0 +1,39 @@
+contract file connected with index file
+
+index.html
+
+
+<body>
+
+    {% extends 'contract.html'%}
+
+    {% block content %}
+
+    <h1> Your Name is {{Name}}</h1>
+    <h1>Your learning course {{Course}}</h1>
+
+    {% endblock %}
+</body>
+
+
+contract.html
+
+
+<body bgcolor="yellow"> 
+
+    {% block content %}
+
+    {% endblock %}
+    
+</body>
+
+
+view.py
+
+
+
+def index(request):
+    text = {'Name' : 'Mahfuz', 'Course' : 'Django'}
+    return render(request,'index.html',text)
+    
+    
