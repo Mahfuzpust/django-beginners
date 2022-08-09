@@ -36,7 +36,7 @@ polls file --> create--> newfile --> urls.py.
 
 create folder Name--> templates.
 
-settings.py --> TEMLATES --> DIRS --> os.path.join(BASE_DIR,templates)
+settings.py --> TEMLATES --> DIRS --> os.path.join(BASE_DIR,'templates')
 
 templates --- create --> demo.html
 
