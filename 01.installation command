@@ -27,3 +27,17 @@ code . --//project goes to vs code
 
 python manage.py runserver // project run
 
+
+
+
+python manage.py startapp polls
+
+polls file --> create--> newfile --> urls.py.
+
+create folder Name--> templates.
+
+settings.py --> TEMLATES --> DIRS --> os.path.join(BASE_DIR,templates)
+
+templates --- create --> demo.html
+
+database --->  python manage.py makemigrations polls
