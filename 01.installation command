@@ -1,0 +1,29 @@
+install python----
+
+window search (search here) ---> python --> open file location--> right click --> open file location -->path copy.
+
+window search (search here)--->Environment -->Environment variables -->  User variables --> path(double click) --> New --> paste path.
+
+window search (search here)--->Environment -->Environment variables --> System variable--> path(double click) --> New --> paste path.
+
+cmd --> python -m pip install --upgrade pip //(optional). if pip want to upgrade then this command uses, otherwise not use.
+
+python --version // check version 
+pip --version  //check version 
+
+crete folder --> cmd --> pip install virtualenv
+
+python -m venv env
+
+.\env\Scripts\activate.ps1 ---(for terminal)
+.\env\Scripts\activate.bat ---(for cmd)
+
+
+pip install django  // django install
+python -m pip install --upgrade pip
+
+django-admin startproject myproject . --//prject create.
+code . --//project goes to vs code
+
+python manage.py runserver // project run
+
