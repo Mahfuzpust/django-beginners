@@ -1,1 +1,49 @@
-fhfhfhfh
+vedio link: https://youtu.be/xutWwHsP9F0
+
+
+models.py --> create a model
+
+from django.db import models
+
+class Contact(models.Model):
+    name = models.CharField(max_length=20)
+    email = models.EmailField()
+    description = models.TextField()
+    
+  
+  views.py--->
+  from polls.models import Contact
+  
+  
+  terminal ---> 
+  python manage.py makemigrations
+  python manage.py migrate
+  python manage.py createsuperuser
+  username : mahfuz
+  email: mahfuzpust@gmail.com
+  password: mahfuz180134
+  again password: mahfuz180134
+  
+  
+  
+  
+  admin.py--->
+  from polls.models import Contract
+  
+  admin.site.register(Contract)
+  
+  
+  
+  views.py--->
+  from polls.models import Contact
+  
+  def contact(request):
+    if request.method == "POST":
+        name = request.POST['name']
+        email = request.POST['email']
+        description = request.POST['description']
+        values = Contact(name=name, email=email, description= description)
+        values.save()
+    return render(request, 'contact.html')
+    
+    
