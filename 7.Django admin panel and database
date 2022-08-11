@@ -19,8 +19,8 @@ class Contact(models.Model):
   python manage.py makemigrations
   python manage.py migrate
   python manage.py createsuperuser
-  username : mahfuz
-  email: mahfuzpust@gmail.com
+  username : mahfuz1
+  email: mahfuzpust2018@gmail.com
   password: mahfuz180134
   again password: mahfuz180134
   
