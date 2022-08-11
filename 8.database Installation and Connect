@@ -1,0 +1,48 @@
+go to pgadmin.......
+
+password: mahfuz180134
+
+Add New Server --> 
+General-->Name-->nhserver
+Connection--> Host name: localhost
+port:5432
+username:postgres
+password: mahfuz180134
+
+nhserver--> Database--> create-->database name: mahfuz
+
+
+go to vscode........
+
+terminal---->
+pip install psycopg2
+pip install pillow
+
+
+
+setting.py
+--------------
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'table',
+        'USER' : 'postgres',
+        'PASSWORD' : 'mahfuz180134',
+        'HOST' : 'localhost',
+        'PORT' : '5432'
+    }
+}
+
+
+
+terminal--->
+python manage.py migrate
+
+
+go to pgadmin.......
+
+mahfuz-->refresh-->Schemas-->Tables-->
+
+
+run---refresh.....
