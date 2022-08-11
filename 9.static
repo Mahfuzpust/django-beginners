@@ -1,0 +1,26 @@
+create --> folder(static) --->file name(img)
+
+static using connect img folder and style.css file
+
+setting.py---->
+
+import os
+STATIC_URL = 'static/'
+STATICFILES_DIRS = [ 
+    os.path.join(BASE_DIR, 'static')
+]
+
+
+index.html----->
+
+{% load static %}
+<link rel="stylesheet" href="{% static 'style.css' %}">
+
+<h1> Mahfuz Khan Raj </h1>
+<img src="{% static 'img/103.jpg' %}">
+
+style.css--->
+
+h1{
+    color: blue;
+}
