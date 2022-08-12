@@ -82,8 +82,8 @@ admin.site.register(Contact)
     if request.method == "POST":
         name = request.POST['name']
         email = request.POST['email']
-        description = request.POST['description']
-        values = Contact(name=name, email=email, description= description)
+        des = request.POST['des']
+        values = Contact(name=name, email=email, des= des)
         values.save()
     return render(request, 'contact.html')
     
