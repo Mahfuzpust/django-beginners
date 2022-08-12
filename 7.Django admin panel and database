@@ -1,7 +1,43 @@
 vedio link: https://youtu.be/xutWwHsP9F0
 
+  views.py--->
+  def contact(request):
+     return render(request, 'contact.html')
 
-models.py --> create a model
+
+urls.py--->
+path('contact/', views.contact, name='contact'),
+
+
+contact.html--->
+<form action="/contact" method="POST">
+  {% csrf_token %}
+  <div class="mb-3">
+    <label for="name" class="form-label">Name</label>
+    <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name">
+  </div>
+  <div class="mb-3">
+    <label for="email" class="form-label">Email</label>
+    <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email">
+  </div>
+  <div class="mb-3">
+    <label for="des" class="form-label">Description</label>
+    <textarea class="form-control" id="des" name="des" rows="3"></textarea>
+  </div>
+  <button type="submit">Submit</button>
+</form>
+
+
+
+views.py---> 
+def contact(request):
+    if request.method == "POST":
+        print('ssss')
+    return render(request, 'contact.html')
+
+
+
+models.py --> 
 
 from django.db import models
 
@@ -15,6 +51,7 @@ class Contact(models.Model):
   from polls.models import Contact
   
   
+  models.py --> 
   terminal ---> 
   python manage.py makemigrations
   python manage.py migrate
@@ -24,13 +61,17 @@ class Contact(models.Model):
   password: mahfuz180134
   again password: mahfuz180134
   
+ admin panel created-------<>
+ 
+ 
+to do registration----<>
   
+admin.py--->
   
-  
-  admin.py--->
-  from polls.models import Contract
-  
-  admin.site.register(Contract)
+from django.contrib import admin
+from polls.models import Contact
+
+admin.site.register(Contact)
   
   
   
