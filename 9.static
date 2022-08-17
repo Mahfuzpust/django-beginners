@@ -1,5 +1,7 @@
 create --> folder(static) --->file name(img)
 
+static--> style.css
+
 static using connect img folder and style.css file
 
 setting.py---->
