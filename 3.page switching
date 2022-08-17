@@ -1,10 +1,3 @@
-file name---> demo.html
-    
-<body>
-    <h1>It is home menu.</h1>
-    <h2><a href ="{% url 'login' %}">Login</a></h2>
-    <h2><a href ="{% url 'signup' %}">Signup</a></h2>
-</body>
 
 file name---> login.html
 
@@ -16,4 +9,31 @@ file name---> signup.html
 
 <body>
     you are signup in page.
+</body>
+
+urls.py--polls
+
+    path('login/', views.login, name='login'),
+    path('signup/', views.signup, name='signup'),
+    
+  
+  views.py --->
+  
+from django.shortcuts import render
+from django.http import HttpResponse
+
+def home(requst):
+    return render(requst, 'home.html')
+def login(requst):
+    return render(requst,'login.html')
+def signup(requst):
+    return render(requst,'signup.html')
+
+
+file name---> home.html
+    
+<body>
+    <h1>It is home menu.</h1>
+    <h2><a href ="{% url 'login' %}">Login</a></h2>
+    <h2><a href ="{% url 'signup' %}">Signup</a></h2>
 </body>
