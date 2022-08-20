@@ -1,0 +1,29 @@
+
+views.py ---->
+
+
+from polls.models import Contact
+from polls.serializers import ContactSerializer
+from rest_framework import generics
+
+
+class contactList(generics.ListCreateAPIView):
+    queryset = Contact.objects.all()
+    serializer_class = ContactSerializer
+
+
+class contactDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Contact.objects.all()
+    serializer_class = ContactSerializer
+    
+    
+ urls.py--->
+    
+ from django.urls import path
+from polls import views
+
+urlpatterns = [
+
+    path('myapi/', views.contactList.as_view()),
+    path('apidetails/<int:pk>/', views.contactDetail.as_view()),
+]
