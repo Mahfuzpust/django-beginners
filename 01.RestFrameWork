@@ -1,3 +1,8 @@
+Environment--- powershell
+
+Set-ExecutionPolicy Unrestricted
+
+
 crete folder --> cmd --> pip install virtualenv
 
 python -m venv env
@@ -11,6 +16,8 @@ pip install django  // django install
 pip install djangorestframework
 
 python -m pip install --upgrade pip
+
+pip install -r requirements.txt
 
 django-admin startproject myproject . --//prject create.
 code . --//project goes to vs code
